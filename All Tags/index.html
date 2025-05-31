@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer>
+        <p> <b>Kho <mark> Duchian Wala, </mark> Post office Mangu Taru. <br />
+                Tehsil and District Nankana Sahib. <br />
+                Punjab, Pakistan.</b> </p>
+                <p>My birthday is on <time datetime="2023-09-15">September 15th, 2023</time>.</p>
+                <p>The conference will be held from <time datetime="2023-10-10T09:00">October 10th, 2023 at 9:00 AM</time> to <time datetime="2023-10-12T18:00">October 12th, 2023 at 6:00 PM</time>.</p>
+                <div id="div">
+                <p id="test">test</p>
+            </div>
+            <div id="pg">
+                <progress id="myProgress" value="0" max="100"></progress>
+            </div>
+            <div id="div">
+                <p id="hours">0</p>
+                <p id="colon">:</p>
+                <p id="min">0</p>
+                <p id="colon">:</p>
+                <p id="sec">0</p>
+            </div>
+            <div id="div">
+                <button id="button">First Button</button>            
+            </div>
+                <style>
+                    #button {
+                        background-color: green;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-radius: 5px;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        padding: 5px;
+                        text-align: center;
+                        color: white;
+                        text-shadow: yellowgreen;
+                    }
+                    #test {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        color: green;
+                    }
+                    #hours {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        color: rgb(255, 0, 0);
+                    }
+                    #min {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        color: rgb(194, 165, 1);
+                    }
+                    #sec {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        color: rgb(2, 129, 2);
+                    }
+                    #colon {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        color: rgb(0, 0, 0);
+                    }
+                    #pg{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    #div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    #div2{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    #myProgress {
+                        width: 80vw;
+                        height: 20vh;
+                        position: relative;
+                    }
+                </style>
+                <script>
+                  var button = document.getElementById("button");
+                  var progressBar = document.getElementById("myProgress");
+                  var test = document.getElementById("test");
+                  var hours = document.getElementById("hours");
+                  var min = document.getElementById("min");
+                  var sec = document.getElementById("sec");
+                  var progress = 0;
+                  var vhours = 0;
+                  var vmin = 0;
+                  var vsec = 0;
+                  button.addEventListener("click", function(fun) {
+                    
+                      fun()
+                      function fun() {
+                        if(vsec == 60){
+                        vsec = 1;
+                        sec.innerText = vsec;
+                        vmin = vmin + 1;
+                        min.innerText = vmin;
+                        setTimeout(fun, 1000)
+                    }else{
+                        vsec = vsec + 1;
+                      sec.innerText = vsec;
+                      setTimeout(fun, 1000)
+                      }
+                    if(vmin == 60){
+                        vmin = 0;
+                        min.innerText = vmin;
+                        vhours = vhours + 1;
+                        hours.innerText = vhours;
+                    }
+                    };
+                });
+                function updateProgress() {
+                  if (progress < 100) {
+                    progress += 2;
+                    progressBar.value = progress;
+                    test.innerText = progress;
+                    setTimeout(updateProgress, 50);
+                  }
+                }
+                updateProgress();
+                fun();
+                </script>
+    </footer>
+</body>
+</html>
