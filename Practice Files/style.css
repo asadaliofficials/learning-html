@@ -1,0 +1,59 @@
+#nav{
+    font-size: 3rem;
+
+}
+
+#h1{
+    color: #ff0000;
+    background-color: #54d65b;
+    width: fit-content;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+#h2{
+    color: rgb(0, 4, 255);
+    font-size: 1.5rem;
+}
+#p1{
+    color: #ff9100;
+    font-size: 2rem;
+}
+#p2{
+    color: #533206;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+#img1{
+    width: 300px;
+    height: 300px;
+}
+
+button{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #54d65b;
+    background-color: forestgreen;
+    border-radius: 10px;
+}
+
+a{
+    font-size: 2rem;
+}
+
+ol{
+    background-color: #ff9100;
+    font-size: 2rem;
+    
+}
+ul{
+    background-color: #b47e37;
+    font-size: 2rem;
+
+}
+
+form{
+    background-color: coral;
+}
